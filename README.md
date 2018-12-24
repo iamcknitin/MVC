@@ -57,7 +57,19 @@
         }
     }
   
-  
+    public class HomeController : Controller
+    {
+          public ViewResult Index()
+          {
+              return View();
+          }
+
+          [Route("Contact")]     <----- Attribute Routing
+          public ViewResult ContactUs()
+          {
+              return View();
+          }
+    }
   
   ## 3.       Views
   ## 4.       Razor Views
