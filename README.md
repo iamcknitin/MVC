@@ -1,13 +1,13 @@
 # MVC
 
-  1.       MVC lifecycle
-  2.       Routing
-  3.       Views
-  4.       Razor Views
-  5.       Filters
-  6.       Authentication
-  7.       Security implementation
-  8.       Exception handling
+  ## 1.       MVC lifecycle
+  ## 2.       Routing
+  ## 3.       Views
+  ## 4.       Razor Views
+  ## 5.       Filters
+  ## 6.       Authentication
+  ## 7.       Security implementation
+  ## 8.       Exception handling
              
     - 1. try/catch
              
