@@ -71,6 +71,22 @@
           }
     }
   
+  Using RoutePrefix user will need to add some prefix text brfore action in URL. 
+  
+  Example: http://localhost:4200/infromation/contact
+  
+    [RoutePrefix("Infromation")]  <----- Route Prefix  
+    public class HomeController : Controller
+    {
+        [Route("Contact")]
+        public ViewResult ContactUs()
+        {
+            return View();
+        }
+    }
+    
+  for more infromation : https://blogs.msdn.microsoft.com/webdev/2013/10/17/attribute-routing-in-asp-net-mvc-5/
+  
   ## 3.       Views
   ## 4.       Razor Views
   ## 5.       Filters
