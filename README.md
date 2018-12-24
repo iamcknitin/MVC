@@ -1,15 +1,13 @@
 # MVC
 
-## 1.       MVC
-
-  - a.       MVC lifecycle
-  - b.       Routing
-  - c.       Views
-  - d.       Razor Views
-  - e.       Filters
-  - f.       Authentication
-  - g.       Security implementation
-  - h.       Exception handling
+  - 1.       MVC lifecycle
+  - 2.       Routing
+  - 3.       Views
+  - 4.       Razor Views
+  - 5.       Filters
+  - 6.       Authentication
+  - 7.       Security implementation
+  - 8.       Exception handling
              
     - 1. try/catch
              
@@ -121,12 +119,12 @@
                       Trace.Write(ex);
                   }
   
-  - i.       Caching
-  - j.       Validations
-  - k.       Areas
-  - l.       Cookies
-  - m.       Value Provider / Custom Value Provider
-  - n.       handler
+  - 9.       Caching
+  - 10.       Validations
+  - 11.       Areas
+  - 12.       Cookies
+  - 13.       Value Provider / Custom Value Provider
+  - 14.       handler
   
    Create a class library project and impliment "IHttpHandler"    
             public class RssHandler : IHttpHandler
@@ -161,7 +159,7 @@
                   </handlers>
                 </system.webServer>
   
-  - o.       module
+  - 15.       module
               
     Create a class library project and impliment "IHttpModule"            
               
@@ -221,7 +219,7 @@
   
   Now add the project reference in MVC project
 
- - q. ActionFilterAttribute
+ - 16. ActionFilterAttribute
  
  Add a file with the name "CustomFilter" in the MVC project
  
