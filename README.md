@@ -119,10 +119,10 @@
   5. Exception filters
   
   Order of Filter Execution
-  First Authentication filters will get execute
-  Second Authorization filters
-  Third Action filters
-  Fiurth Result filters
+  1. Authentication filters will get execute first then,
+  2. Authorization filters
+  3. Action filters
+  4. Result filters
     
   ## 6.       Authentication
   ## 7.       Security implementation
