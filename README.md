@@ -1,6 +1,13 @@
 # MVC
 
   ## 1.       MVC lifecycle
+  
+  ### MVC has two life cycles −
+  1. The application life cycle
+     Application life cycle is the time when the application process actually begins running IIS until the time it stops. It mark by the
+     Application_Start() to Application_End()
+  2. The request life cycle
+  
   ## 2.       Routing
   ## 3.       Views
   ## 4.       Razor Views
