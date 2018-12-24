@@ -32,17 +32,17 @@
   
  In App_Start/RouteConfig.cs file
  
- public class RouteConfig 
- {
-      public static void RegisterRoutes(RouteCollection routes){
-         routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-         routes.MapRoute(
-            name: "Default",
-            url: "{controller}/{action}/{id}",
-            defaults: new{ controller = "Home", action = "Index", id = UrlParameter.Optional});
-      }
-  } 
-  
+     public class RouteConfig 
+     {
+          public static void RegisterRoutes(RouteCollection routes){
+             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+             routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new{ controller = "Home", action = "Index", id = UrlParameter.Optional});
+          }
+      } 
+
  ## Attribute Routing in ASP.NET MVC 5   
  
  To enable routing, add routes.MapMvcAttributeRoutes() in App_Start/RouteConfig.cs file.
@@ -180,7 +180,58 @@
             throw new NotImplementedException();
         }
     }
+    
+  ## Action Filters
+  
+    public interface IActionFilter
+    {
+        void OnActionExecuting(ActionExecutingContext filterContext);
+        void OnActionExecuted(ActionExecutedContext filterContext);
+    }
+    
+    public class CustomActionFilter : IActionFilter
+    {
+        public void OnActionExecuted(ActionExecutedContext filterContext)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            throw new NotImplementedException();
+        }
+    }
+  
+  ## Result Filters
+  
+    public interface IResultFilter
+    {
+        void OnResultExecuted(ResultExecutedContext filterContext);
+        void OnResultExecuting(ResultExecutingContext filterContext);
+    }
+    
+    public class CustomResultFilter : IResultFilter
+    {
+        public void OnResultExecuted(ResultExecutedContext filterContext)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnResultExecuting(ResultExecutingContext filterContext)
+        {
+            throw new NotImplementedException();
+        }
+    }
+  
+  ## Exception Filters
  
+    public interface IExceptionFilter
+    {
+        void OnException(ExceptionContext filterContext);
+    }
+  
+  
+  
   
   ## 6.       Authentication
   ## 7.       Security implementation
