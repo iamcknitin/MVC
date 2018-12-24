@@ -9,7 +9,7 @@
   ## 7.       Security implementation
   ## 8.       Exception handling
              
-    - 1. try/catch
+    ### 1. try/catch
              
                   public ActionResult Index()
                   {
@@ -30,7 +30,7 @@
                       }
                   }
                   
-    - 2. In web.config
+    ### 2. In web.config
                   
                   <system.web>
                     <customErrors mode="On" defaultRedirect="~/ErrorHandler/Index">
@@ -38,7 +38,7 @@
                     </customErrors>
                   </system.web>
                                
-    - 3. using [HandleError] attribute
+    ### 3. using [HandleError] attribute
              
                   [HandleError(ExceptionType = typeof(DivideByZeroException), View = "~/Views/CommonExceptionView.cshtml")]
                   public ActionResult Contact()
@@ -50,7 +50,7 @@
                       return View();
                   }
              
-    - 4. Overriding OnException() method of controller base class
+    ### 4. Overriding OnException() method of controller base class
              
                   public class HomeController : Controller
                   {
@@ -76,7 +76,7 @@
                       }
                   }
                   
-    - 5. HandleErrorAttribute by create action filter class
+    ### 5. HandleErrorAttribute by create action filter class
                   
                   [CustomErrorHandling]
                   public ActionResult About()
@@ -110,7 +110,7 @@
                   }
 
              
-    - 6. Application_Error() using Global.asax page.
+    ### 6. Application_Error() using Global.asax page.
                   
                   protected void Application_Error()
                   {
@@ -119,12 +119,12 @@
                       Trace.Write(ex);
                   }
   
-  - 9.       Caching
-  - 10.       Validations
-  - 11.       Areas
-  - 12.       Cookies
-  - 13.       Value Provider / Custom Value Provider
-  - 14.       handler
+  ## 9.       Caching
+  ## 10.       Validations
+  ## 11.       Areas
+  ## 12.       Cookies
+  ## 13.       Value Provider / Custom Value Provider
+  ## 14.       handler
   
    Create a class library project and impliment "IHttpHandler"    
             public class RssHandler : IHttpHandler
@@ -159,7 +159,7 @@
                   </handlers>
                 </system.webServer>
   
-  - 15.       module
+  ## 15.       module
               
     Create a class library project and impliment "IHttpModule"            
               
@@ -196,7 +196,7 @@
                 </modules>
               </system.webServer>
               
-  - p. PreApplicationStartMethod          
+  ## 16. PreApplicationStartMethod          
   
   This method will call before the Application_Start() method.
   
@@ -219,7 +219,7 @@
   
   Now add the project reference in MVC project
 
- - 16. ActionFilterAttribute
+ ## 17. ActionFilterAttribute
  
  Add a file with the name "CustomFilter" in the MVC project
  
