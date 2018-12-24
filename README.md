@@ -90,6 +90,27 @@
   ## 3.       Views
   ## 4.       Razor Views
   ## 5.       Filters
+  
+  Filters are used to perform the following common functionalities
+  
+  1. Custom Authentication
+  2. Custom Authorization(User based or Role based)
+  3. Error handling or logging
+  4. Activity Logging
+  5. Data Caching
+  6. Data Compression
+  
+  Types of Filters
+  
+  1. Authencation filters
+  2. Authorization filters
+  3. Action filters
+  4. Result filters
+  5. Exception filters
+  
+  
+  
+  
   ## 6.       Authentication
   ## 7.       Security implementation
   ## 8.       Exception handling
