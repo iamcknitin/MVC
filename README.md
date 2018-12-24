@@ -10,6 +10,10 @@
      methods Application_Start() to Application_End() of Global.ashx.
   
   2. The request life cycle
+      
+     Its is sequence of events that executed every time when HTTP request received and handled by our application. 
+  
+  Request--> Routing--> Controller Initialization--> Action Execution--> Result Execution--> View Engine--> Result Execution--> Response
   
   ## 2.       Routing
   ## 3.       Views
