@@ -123,7 +123,27 @@
   2. Authorization filters
   3. Action filters
   4. Result filters
-    
+  
+  Configuring Filters
+  
+  In Global.ashx
+  
+    protected void Application_Start()
+    {
+         FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+    }
+  
+  In App_Start/FilterConfig.cs
+
+    public class FilterConfig
+    {
+        public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+        {
+            filters.Add(new HandleErrorAttribute());
+        }
+    }
+  
+  
   ## 6.       Authentication
   ## 7.       Security implementation
   ## 8.       Exception handling
