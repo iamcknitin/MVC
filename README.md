@@ -6,8 +6,8 @@
   
   1. The application life cycle
   
-     Application life cycle is the time when the application process actually begins running IIS until the time it stops. It mark by the
-     Application_Start() to Application_End()
+     Application life cycle is the time when the application process actually begins running on IIS until it get stop. It mark by the
+     methods Application_Start() to Application_End() of Global.ashx.
   
   2. The request life cycle
   
