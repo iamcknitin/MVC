@@ -18,6 +18,47 @@
      Result Execution --> Response
   
   ## 2.       Routing
+  
+  A process of directing an HTTP request to a controller in MVC application with the help of System.Web.Routing namespace. its a prat of   asp.net runtime it is used by MVC framework.
+  
+  The Global.asax file define the route for your application in Application_Start() method.
+  
+  In Global.ashx file
+  
+    protected void Application_Start()
+    {
+         RouteConfig.RegisterRoutes(RouteTable.Routes);
+    }
+  
+ In App_Start/RouteConfig.cs file
+ 
+ public class RouteConfig 
+ {
+      public static void RegisterRoutes(RouteCollection routes){
+         routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+         routes.MapRoute(
+            name: "Default",
+            url: "{controller}/{action}/{id}",
+            defaults: new{ controller = "Home", action = "Index", id = UrlParameter.Optional});
+      }
+  } 
+  
+ ## Attribute Routing in ASP.NET MVC 5   
+ 
+ To enable routing, add routes.MapMvcAttributeRoutes() in App_Start/RouteConfig.cs file.
+ 
+    public class RouteConfig
+    {
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.IgnoreRoute(“{resource}.axd/{*pathInfo}”);
+
+            routes.MapMvcAttributeRoutes();  // <--- Enabling Attribute Routing
+        }
+    }
+  
+  
+  
   ## 3.       Views
   ## 4.       Razor Views
   ## 5.       Filters
