@@ -91,13 +91,23 @@
   ## 4.       Razor Views
   ## 5.       Filters
   
+  In ASP.NET MVC, http request is routed to the controller and action. sometimes we want to execute some logic before or after an action   method executes. To do that wecan use ASP.NET MVC provides filters.
+
+  Filter is a custom class where you can write custom logic whcih can execute before or after an action method executes.
+  It can be applied to an action method or controller 
+  1. declarative 
+  2. programmatic 
+  
+  In Declarative way applying a filter attribute to an action method or controller
+  and In programmatic way by implementing a corresponding interface.
+  
   Filters are used to perform the following common functionalities
   
   1. Custom Authentication
   2. Custom Authorization(User based or Role based)
   3. Error handling or logging
-  4. Activity Logging
-  5. Data Caching
+  4. Data Caching
+  5. Activity Logging
   6. Data Compression
   
   Types of Filters
@@ -107,9 +117,6 @@
   3. Action filters
   4. Result filters
   5. Exception filters
-  
-  
-  
   
   ## 6.       Authentication
   ## 7.       Security implementation
