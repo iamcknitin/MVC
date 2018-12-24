@@ -9,7 +9,7 @@
   ## 7.       Security implementation
   ## 8.       Exception handling
              
-    ### 1. try/catch
+  ### 1. try/catch
              
                   public ActionResult Index()
                   {
@@ -30,7 +30,7 @@
                       }
                   }
                   
-    ### 2. In web.config
+  ### 2. In web.config
                   
                   <system.web>
                     <customErrors mode="On" defaultRedirect="~/ErrorHandler/Index">
@@ -38,7 +38,7 @@
                     </customErrors>
                   </system.web>
                                
-    ### 3. using [HandleError] attribute
+  ### 3. using [HandleError] attribute
              
                   [HandleError(ExceptionType = typeof(DivideByZeroException), View = "~/Views/CommonExceptionView.cshtml")]
                   public ActionResult Contact()
@@ -50,7 +50,7 @@
                       return View();
                   }
              
-    ### 4. Overriding OnException() method of controller base class
+  ### 4. Overriding OnException() method of controller base class
              
                   public class HomeController : Controller
                   {
@@ -76,7 +76,7 @@
                       }
                   }
                   
-    ### 5. HandleErrorAttribute by create action filter class
+  ### 5. HandleErrorAttribute by create action filter class
                   
                   [CustomErrorHandling]
                   public ActionResult About()
@@ -110,7 +110,7 @@
                   }
 
              
-    ### 6. Application_Error() using Global.asax page.
+  ### 6. Application_Error() using Global.asax page.
                   
                   protected void Application_Error()
                   {
