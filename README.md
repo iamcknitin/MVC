@@ -142,7 +142,45 @@
             filters.Add(new HandleErrorAttribute());
         }
     }
-  
+ 
+ ## Authencation filters
+ 
+    public interface IAuthenticationFilter
+    {
+        void OnAuthentication(AuthenticationContext filterContext);
+
+        void OnAuthenticationChallenge(AuthenticationChallengeContext filterContext);
+    }
+ 
+    public class CustomAuthenticationAttribute : ActionFilterAttribute, IAuthenticationFilter
+    {
+        public void OnAuthentication(AuthenticationContext filterContext)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnAuthenticationChallenge(AuthenticationChallengeContext filterContext)
+        {
+            throw new NotImplementedException();
+        }
+    }
+    
+    
+ ## Authorization Filters
+ 
+    public interface IAuthorizationFilter
+    {
+        void OnAuthorization(AuthorizationContext filterContext);
+    }
+ 
+    public class CustomAuthorizeAttribute : FilterAttribute, IAuthorizationFilter
+    {
+        public void OnAuthorization(AuthorizationContext filterContext)
+        {
+            throw new NotImplementedException();
+        }
+    }
+ 
   
   ## 6.       Authentication
   ## 7.       Security implementation
@@ -259,11 +297,11 @@
                   }
   
   ## 9.       Caching
-  ## 10.       Validations
-  ## 11.       Areas
-  ## 12.       Cookies
-  ## 13.       Value Provider / Custom Value Provider
-  ## 14.       handler
+  ## 10.      Validations
+  ## 11.      Areas
+  ## 12.      Cookies
+  ## 13.      Value Provider / Custom Value Provider
+  ## 14.      handler
   
    Create a class library project and impliment "IHttpHandler"    
             public class RssHandler : IHttpHandler
