@@ -118,6 +118,12 @@
   4. Result filters
   5. Exception filters
   
+  Order of Filter Execution
+  First Authentication filters will get execute
+  Second Authorization filters
+  Third Action filters
+  Fiurth Result filters
+    
   ## 6.       Authentication
   ## 7.       Security implementation
   ## 8.       Exception handling
